@@ -1,0 +1,29 @@
+{
+  "name": "bloodRequest",
+  "plural": "bloodRequests",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "bloodType": {
+      "type": "string",
+      "required": true
+    },
+    "unitsRequired": {
+      "type": "number",
+      "required": true,
+      "default": 1
+    },
+    "purpose": {
+      "type": "string",
+      "required": true,
+      "default": "transfusion"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
