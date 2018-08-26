@@ -18,8 +18,73 @@
     },
     "purpose": {
       "type": "string",
-      "required": true,
+      "required": false,
       "default": "transfusion"
+    },
+    "patientName": {
+      "type": "string",
+      "required": false
+    },
+    "requiredBy": {
+      "type":"date",
+      "required": true
+    },
+    "hospitalDetails": {
+      "type":{
+        "hospitalName":{
+          "type":"string",
+          "required":true
+        },
+        "hospitalLocationDetails":{
+          "type":{
+            "hospitalAddressLine1":{
+              "type":"string",
+              "required":true
+            },
+            "hospitalAddressLine2":{
+              "type":"string",
+              "required":false
+            },
+            "hospitalAddressLine3":{
+              "type":"string",
+              "required":false
+            },
+            "hospitalCity":{
+              "type":"string",
+              "required":true
+            },
+            "hospitalState":{
+              "type":"string",
+              "required":true
+            },
+            "hospitalPincode":{
+              "type":"string",
+              "required":true
+            },
+            "hospitalGeoLocation":{
+              "type":"GeoPoint",
+              "required": false
+            }
+          }
+        }
+      }
+    },
+    "attenderDetails":{
+      "type":{
+        "attenderName": {
+          "type":"string",
+          "required":true
+        },
+        "attenderPhone": {
+          "type": "number",
+          "required": true
+        }
+      }
+    },
+    "isRequestVerified":{
+      "type":"boolean",
+      "default": false,
+      "required": true
     }
   },
   "validations": [],
