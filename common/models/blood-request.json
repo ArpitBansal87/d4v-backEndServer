@@ -30,6 +30,7 @@
       "required": true
     },
     "hospitalDetails": {
+      "requried": true,
       "type":{
         "hospitalName":{
           "type":"string",
@@ -37,31 +38,31 @@
         },
         "hospitalLocationDetails":{
           "type":{
-            "hospitalAddressLine1":{
+            "addressLine1":{
               "type":"string",
               "required":true
             },
-            "hospitalAddressLine2":{
+            "addressLine2":{
               "type":"string",
               "required":false
             },
-            "hospitalAddressLine3":{
+            "addressLine3":{
               "type":"string",
               "required":false
             },
-            "hospitalCity":{
+            "city":{
               "type":"string",
               "required":true
             },
-            "hospitalState":{
+            "state":{
               "type":"string",
               "required":true
             },
-            "hospitalPincode":{
+            "pincode":{
               "type":"string",
               "required":true
             },
-            "hospitalGeoLocation":{
+            "geoLocation":{
               "type":"GeoPoint",
               "required": false
             }
@@ -70,6 +71,7 @@
       }
     },
     "attenderDetails":{
+      "requried":true,
       "type":{
         "attenderName": {
           "type":"string",
@@ -85,7 +87,19 @@
       "type":"boolean",
       "default": false,
       "required": true
-    }
+    },
+    "creationDetails":{
+      "requried":true,
+      "type":{
+      "createdByName":{
+        "type": "string",
+        "required":true
+      },
+      "createdById":{
+        "type": "string",
+        "required": true
+      }
+    }}
   },
   "validations": [],
   "relations": {},
