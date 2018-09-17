@@ -26,80 +26,67 @@
       "required": false
     },
     "requiredBy": {
-      "type":"date",
+      "type": "date",
       "required": true
     },
-    "hospitalDetails": {
-      "requried": true,
-      "type":{
-        "hospitalName":{
-          "type":"string",
-          "required":true
-        },
-        "hospitalLocationDetails":{
-          "type":{
-            "addressLine1":{
-              "type":"string",
-              "required":true
-            },
-            "addressLine2":{
-              "type":"string",
-              "required":false
-            },
-            "addressLine3":{
-              "type":"string",
-              "required":false
-            },
-            "city":{
-              "type":"string",
-              "required":true
-            },
-            "state":{
-              "type":"string",
-              "required":true
-            },
-            "pincode":{
-              "type":"string",
-              "required":true
-            },
-            "geoLocation":{
-              "type":"GeoPoint",
-              "required": false
-            }
-          }
-        }
-      }
+    "status":{
+      "type":"string",
+      "default":"New",
+      "required": true
     },
-    "attenderDetails":{
-      "requried":true,
-      "type":{
-        "attenderName": {
-          "type":"string",
-          "required":true
-        },
-        "attenderPhone": {
-          "type": "number",
-          "required": true
-        }
-      }
+    "hospitalName": {
+      "type": "string",
+      "required": true
     },
-    "isRequestVerified":{
-      "type":"boolean",
+    "hospitalAddressLine1": {
+      "type": "string",
+      "required": true
+    },
+    "hospitalAddressLine2": {
+      "type": "string",
+      "required": false
+    },
+    "hospitalAddressLine3": {
+      "type": "string",
+      "required": false
+    },
+    "hospitalCity": {
+      "type": "string",
+      "required": true
+    },
+    "hospitalState": {
+      "type": "string",
+      "required": true
+    },
+    "hospitalPincode": {
+      "type": "string",
+      "required": true
+    },
+    "hospitalGeoLocation": {
+      "type": "GeoPoint",
+      "required": false
+    },
+    "attenderName": {
+      "type": "string",
+      "required": true
+    },
+    "attenderPhone": {
+      "type": "number",
+      "required": true
+    },
+    "isRequestVerified": {
+      "type": "boolean",
       "default": false,
       "required": true
     },
-    "creationDetails":{
-      "requried":true,
-      "type":{
-      "createdByName":{
-        "type": "string",
-        "required":true
-      },
-      "createdById":{
-        "type": "string",
-        "required": true
-      }
-    }}
+    "createdByName": {
+      "type": "string",
+      "required": true
+    },
+    "createdById": {
+      "type": "string",
+      "required": true
+    }
   },
   "validations": [],
   "relations": {},
