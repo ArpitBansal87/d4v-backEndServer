@@ -1,0 +1,26 @@
+{
+  "name": "updateDetails",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "updateId": {
+      "type": "string"
+    },
+    "updateTime": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "bloodRequest": {
+      "type": "belongsTo",
+      "model": "bloodRequest",
+      "foreignKey": "_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
