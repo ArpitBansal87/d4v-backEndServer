@@ -42,5 +42,9 @@
   "bloodRequest": {
     "dataSource": "chinguDB",
     "public": true
+  },
+  "updateDetails": {
+    "dataSource": "chinguDB",
+    "public": false
   }
 }

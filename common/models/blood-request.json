@@ -29,10 +29,10 @@
       "type": "date",
       "required": true
     },
-    "status":{
-      "type":"string",
-      "default":"New",
-      "required": true
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "New"
     },
     "hospitalName": {
       "type": "string",
@@ -76,8 +76,8 @@
     },
     "isRequestVerified": {
       "type": "boolean",
-      "default": false,
-      "required": true
+      "required": true,
+      "default": false
     },
     "createdByName": {
       "type": "string",
@@ -89,7 +89,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "updateDetails": {
+      "type": "hasMany",
+      "model": "updateDetails",
+      "foreignKey": "_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

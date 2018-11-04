@@ -1,5 +1,5 @@
 {
-  "name": "nodeServer",
+  "name": "d4vbackend",
   "version": "1.0.0",
   "main": "server/server.js",
   "engines": {
