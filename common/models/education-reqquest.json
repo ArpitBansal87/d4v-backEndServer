@@ -1,0 +1,38 @@
+{
+  "name": "educationRequest",
+  "plural": "educationRequests",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "amountRequired": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "raisedBy": {
+      "type": "string",
+      "required": true,
+      "default": "member"
+    },
+    "rasiedById": {
+      "type": "string",
+      "required": true
+    },
+    "moderatorsInvolved": {
+      "type": "object",
+      "required": true
+    },
+    "amountCollected": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

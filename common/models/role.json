@@ -1,0 +1,23 @@
+{
+  "name": "role",
+  "plural": "roles",
+  "base": "Role",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "roleMappings": {
+      "type": "hasMany",
+      "model": "roleMapping",
+      "foreignKey": "roleId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

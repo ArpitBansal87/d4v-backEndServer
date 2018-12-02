@@ -1,0 +1,31 @@
+{
+  "name": "roleMapping",
+  "plural": "roleMappings",
+  "base": "RoleMapping",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "role": {
+      "type": "belongsTo",
+      "model": "role",
+      "foreignKey": "roleId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "credential": {
+      "type": "belongsTo",
+      "model": "credential",
+      "foreignKey": "credentialId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
