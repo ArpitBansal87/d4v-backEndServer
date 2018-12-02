@@ -33,7 +33,7 @@
   },
   "Role": {
     "dataSource": "chinguDB",
-    "public": true
+    "public": false
   },
   "credential": {
     "dataSource": "chinguDB",
@@ -46,5 +46,17 @@
   "updateDetails": {
     "dataSource": "chinguDB",
     "public": false
+  },
+  "educationRequest": {
+    "dataSource": "chinguDB",
+    "public": true
+  },
+  "role": {
+    "dataSource": "chinguDB",
+    "public": true
+  },
+  "roleMapping": {
+    "dataSource": "chinguDB",
+    "public": true
   }
 }
