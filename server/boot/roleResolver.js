@@ -8,9 +8,10 @@ module.exports = function (app) {
     'D4VMember',
     'BloodReqModerator'
   ]
-
-  roleList.forEach((roleName) =>{
-    Role.registerResolver(roleName, function (role, context, cb) {
+console.log("test line")
+  // roleList.forEach((roleName) =>{
+    // console.log("For role:"+roleName)
+    Role.registerResolver('Admin', function (role, context, cb) {
     
       console.log("test line model name is :" + util.inspect(context.accessToken, true, 1, true))
   
@@ -93,7 +94,7 @@ module.exports = function (app) {
       //   });
       // });
     });
-  })
+  // })
 
   
 };
