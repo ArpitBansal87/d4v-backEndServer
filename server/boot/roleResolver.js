@@ -9,9 +9,9 @@ module.exports = function (app) {
     'BloodReqModerator'
   ]
 console.log("test line")
-  // roleList.forEach((roleName) =>{
-    // console.log("For role:"+roleName)
-    Role.registerResolver('Admin', function (role, context, cb) {
+   roleList.forEach((roleName) =>{
+     console.log("For role:"+roleName)
+    Role.registerResolver(roleName, function (role, context, cb) {
     
       console.log("test line model name is :" + util.inspect(context.accessToken, true, 1, true))
   
@@ -94,7 +94,7 @@ console.log("test line")
       //   });
       // });
     });
-  // })
+   })
 
   
 };
