@@ -1,0 +1,52 @@
+{
+  "name": "blood-request-status",
+  "plural": "blood-request-statuses",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "statusName": {
+      "type": "string",
+      "required": true
+    },
+    "statusDescription": {
+      "type": "string",
+      "required": true
+    },
+    "prevPossibleStatus": {
+      "type": "string",
+      "required": true
+    },
+    "nextPossibleStatus": {
+      "type": "string",
+      "required": true
+    },
+    "prevPossibleStatusId": {
+      "type": "string",
+      "required": true
+    },
+    "nextPossibleStatusId": {
+      "type": "string",
+      "required": true
+    },
+    "statusOrder": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "blood-request-status-mappings": {
+      "type": "hasMany",
+      "model": "blood-request-status-mapping",
+      "foreignKey": "bloodRequestStatusId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

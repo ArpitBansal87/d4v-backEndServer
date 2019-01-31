@@ -97,6 +97,15 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "blood-request-statuses": {
+      "type": "hasMany",
+      "model": "blood-request-status",
+      "foreignKey": "bloodRequestId",
+      "options": {
+        "nestRemoting": true
+      },
+      "through": "blood-request-status-mapping"
     }
   },
   "acls": [
