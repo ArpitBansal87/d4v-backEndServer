@@ -1,0 +1,46 @@
+{
+  "name": "blood-request-status-mapping",
+  "plural": "bloodRequestStatusMappings",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "principalType": {
+      "type": "string"
+    },
+    "principalId": {
+      "type": "string"
+    },
+    "createdDate": {
+      "type": "date",
+      "required":true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "blood-request-status": {
+      "type": "belongsTo",
+      "model": "blood-request-status",
+      "foreignKey": "bloodRequestStatusId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "bloodRequest": {
+      "type": "belongsTo",
+      "model": "bloodRequest",
+      "foreignKey": "bloodRequestId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

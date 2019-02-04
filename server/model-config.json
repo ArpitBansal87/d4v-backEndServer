@@ -58,5 +58,13 @@
   "roleMapping": {
     "dataSource": "chinguDB",
     "public": true
+  },
+  "blood-request-status": {
+    "dataSource": "chinguDB",
+    "public": true
+  },
+  "blood-request-status-mapping": {
+    "dataSource": "chinguDB",
+    "public": true
   }
 }
